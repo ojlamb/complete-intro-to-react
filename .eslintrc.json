@@ -12,5 +12,9 @@
     "es6": true,
     "browser": true,
     "node": true
+  },
+  "rules": {
+    "jsx-a11y/anchor-has-content": "off",
+    "jsx-a11y/heading-has-content": "off"
   }
 }
