@@ -1,9 +1,25 @@
 import React from "react";
 import { string } from "prop-types";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  width: 32%;
+  border: 2px solid #333;
+  border-radius: 4px;
+  margin-bottom: 15%;
+  padding-right: 10px;
+  overflow: hidden;
+`;
+
+const ImageStyle = styled.img`
+  width: 46%;
+  float: left;
+  margin-right: 10px;
+`;
 
 const ShowCard = props => (
-  <div className="show-card">
-    <img
+  <Wrapper>
+    <ImageStyle
       alt={`${props.title} Show Poster`}
       src={`/public/img/posters/${props.poster}`}
     />
@@ -12,7 +28,7 @@ const ShowCard = props => (
       <h4>({props.year})</h4>
       <p>{props.description}</p>
     </div>
-  </div>
+  </Wrapper>
 );
 ShowCard.propTypes = {
   poster: string.isRequired,
