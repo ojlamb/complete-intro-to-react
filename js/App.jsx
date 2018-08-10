@@ -22,7 +22,7 @@ const App = () => (
           path="/details/:id"
           component={props => {
             const selectedShow = preload.shows.find(
-              show => props.show.params.id === show.imdbID
+              show => props.match.params.id === show.imdbID
             );
             return <Details show={selectedShow} {...props} />;
           }}
@@ -34,12 +34,10 @@ const App = () => (
 );
 
 App.propTypes = {
-  show: shape({
-    poster: string.isRequired,
-    title: string.isRequired,
-    year: string.isRequired,
-    description: string.isRequired,
-    trailer: string.isRequired
+  match: shape({
+    params: shape.isRequired,
+    path: string.isRequired,
+    url: string.isRequired
   })
 };
 

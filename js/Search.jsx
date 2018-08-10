@@ -10,9 +10,9 @@ class Search extends Component {
   props: {
     shows: Array<Show>
   };
-  handleSearchTermChange(event) {
+  handleSearchTermChange = event => {
     this.setState({ searchTerm: event.target.value });
-  }
+  };
   render() {
     return (
       <div className="search">
