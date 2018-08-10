@@ -1,6 +1,7 @@
 import React from "react";
 import { string } from "prop-types";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
   width: 32%;
@@ -24,7 +25,9 @@ const ShowCard = props => (
       src={`/public/img/posters/${props.poster}`}
     />
     <div>
-      <h3>{props.title}</h3>
+      <h3>
+        <Link to={`/details/${props.imdbID}`}> {props.title}</Link>
+      </h3>
       <h4>({props.year})</h4>
       <p>{props.description}</p>
     </div>
@@ -34,6 +37,7 @@ ShowCard.propTypes = {
   poster: string.isRequired,
   title: string.isRequired,
   year: string.isRequired,
-  description: string.isRequired
+  description: string.isRequired,
+  imdbID: string.isRequired
 };
 export default ShowCard;
