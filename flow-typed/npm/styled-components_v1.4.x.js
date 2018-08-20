@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // flow-typed signature: 8e43d27dae79968dc11e73b131ec77da
 // flow-typed version: d36e170dab/styled-components_v1.4.x/flow_>=v0.25.x
 
@@ -24,13 +25,54 @@ declare module 'styled-components' {
   declare class ThemeProvider extends React$Component {
     props: ThemeProviderProps;
   }
+=======
+// flow-typed signature: fc5526b4eb2318ffc7cd4b22f571a90e
+// flow-typed version: 1be5dad600/styled-components_v1.4.x/flow_>=v0.25.x <=v0.52.x
+
+// @flow
+
+type $npm$styledComponents$Interpolation = ((executionContext: Object) => string) | string | number;
+type $npm$styledComponents$NameGenerator = (hash: number) => string
+
+type $npm$styledComponents$StyledComponent = (
+  strings: Array<string>,
+  ...interpolations: Array<$npm$styledComponents$Interpolation>
+) => ReactClass<*>;
+
+
+type $npm$styledComponents$Theme = {[key: string]: mixed};
+type $npm$styledComponents$ThemeProviderProps = {
+  theme: $npm$styledComponents$Theme | ((outerTheme: $npm$styledComponents$Theme) => void)
+};
+type $npm$styledComponents$Component =
+  | React$Component<*, *, *>
+  | (props: *) => React$Element<*>;
+
+class Npm$StyledComponents$ThemeProvider extends React$Component {
+  props: $npm$styledComponents$ThemeProviderProps;
+}
+
+declare module 'styled-components' {
+  declare type Interpolation = $npm$styledComponents$Interpolation;
+  declare type NameGenerator = $npm$styledComponents$NameGenerator;
+
+  declare type StyledComponent = $npm$styledComponents$StyledComponent;
+
+  declare type Theme = $npm$styledComponents$Theme;
+  declare type ThemeProviderProps = $npm$styledComponents$ThemeProviderProps;
+  declare type Component = $npm$styledComponents$Component;
+>>>>>>> v3-11
 
   declare module.exports: {
     injectGlobal: (strings: Array<string>, ...interpolations: Array<Interpolation>) => void,
     css: (strings: Array<string>, ...interpolations: Array<Interpolation>) => Array<Interpolation>,
     keyframes: (strings: Array<string>, ...interpolations: Array<Interpolation>) => string,
     withTheme: (component: Component) => React$Component<*, ThemeProviderProps, *>,
+<<<<<<< HEAD
     ThemeProvider: typeof ThemeProvider,
+=======
+    ThemeProvider: typeof Npm$StyledComponents$ThemeProvider,
+>>>>>>> v3-11
     (baseComponent: Component): StyledComponent,
     a: StyledComponent,
     abbr: StyledComponent,
@@ -168,3 +210,74 @@ declare module 'styled-components' {
     tspan: StyledComponent,
   };
 }
+<<<<<<< HEAD
+=======
+
+declare module 'styled-components/native' {
+  declare type Interpolation = $npm$styledComponents$Interpolation;
+  declare type NameGenerator = $npm$styledComponents$NameGenerator;
+
+  declare type StyledComponent = $npm$styledComponents$StyledComponent;
+
+  declare type Theme = $npm$styledComponents$Theme;
+  declare type ThemeProviderProps = $npm$styledComponents$ThemeProviderProps;
+  declare type Component = $npm$styledComponents$Component;
+
+  declare module.exports: {
+    css: (strings: Array<string>, ...interpolations: Array<Interpolation>) => Array<Interpolation>,
+    withTheme: (component: Component) => React$Component<*, ThemeProviderProps, *>,
+    keyframes: (strings: Array<string>, ...interpolations: Array<Interpolation>) => string,
+    ThemeProvider: typeof Npm$StyledComponents$ThemeProvider,
+
+    (baseComponent: Component): StyledComponent,
+
+    ActivityIndicator: StyledComponent,
+    ActivityIndicatorIOS: StyledComponent,
+    ART: StyledComponent,
+    Button: StyledComponent,
+    DatePickerIOS: StyledComponent,
+    DrawerLayoutAndroid: StyledComponent,
+    FlatList: StyledComponent,
+    Image: StyledComponent,
+    ImageEditor: StyledComponent,
+    ImageStore: StyledComponent,
+    KeyboardAvoidingView: StyledComponent,
+    ListView: StyledComponent,
+    MapView: StyledComponent,
+    Modal: StyledComponent,
+    Navigator: StyledComponent,
+    NavigatorIOS: StyledComponent,
+    Picker: StyledComponent,
+    PickerIOS: StyledComponent,
+    ProgressBarAndroid: StyledComponent,
+    ProgressViewIOS: StyledComponent,
+    RecyclerViewBackedScrollView: StyledComponent,
+    RefreshControl: StyledComponent,
+    ScrollView: StyledComponent,
+    SectionList: StyledComponent,
+    SegmentedControlIOS: StyledComponent,
+    Slider: StyledComponent,
+    SliderIOS: StyledComponent,
+    SnapshotViewIOS: StyledComponent,
+    StatusBar: StyledComponent,
+    SwipeableListView: StyledComponent,
+    Switch: StyledComponent,
+    SwitchAndroid: StyledComponent,
+    SwitchIOS: StyledComponent,
+    TabBarIOS: StyledComponent,
+    Text: StyledComponent,
+    TextInput: StyledComponent,
+    ToastAndroid: StyledComponent,
+    ToolbarAndroid: StyledComponent,
+    Touchable: StyledComponent,
+    TouchableHighlight: StyledComponent,
+    TouchableNativeFeedback: StyledComponent,
+    TouchableOpacity: StyledComponent,
+    TouchableWithoutFeedback: StyledComponent,
+    View: StyledComponent,
+    ViewPagerAndroid: StyledComponent,
+    VirtualizedList: StyledComponent,
+    WebView: StyledComponent,
+  };
+}
+>>>>>>> v3-11
