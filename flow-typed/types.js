@@ -1,31 +1,10 @@
-<<<<<<< HEAD
 // @flow
-
-declare var module: {
-  hot: {
-    accept(path: string, callback: () => void): void
-  }
-};
-=======
-//@flow
->>>>>>> v3-11
 
 export type Show = {
   title: string,
   description: string,
   year: string,
   imdbID: string,
-<<<<<<< HEAD
-  poster: string,
-  trailer: string,
-  rating?: string
-};
-
-export type State = {
-  searchTerm: string,
-  apiData: {
-    [imdbID: string]: Show
-=======
   trailer: string,
   poster: string,
   rating?: string
@@ -34,7 +13,6 @@ export type State = {
 declare var module: {
   hot: {
     accept(path: string, callback: () => void): void
->>>>>>> v3-11
   }
 };
 
