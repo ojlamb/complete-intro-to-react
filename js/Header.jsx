@@ -5,11 +5,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setSearchTerm } from './actionCreators';
 
-<<<<<<< HEAD
 const Header = (props: { showSearch?: boolean, handleSearchTermChange: Function, searchTerm: string }) => {
-=======
-const Header = (props: { showSearch: boolean, handleSearchTermChange: Function, searchTerm: string }) => {
->>>>>>> v3-11
   let utilSpace;
   if (props.showSearch) {
     utilSpace = (

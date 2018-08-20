@@ -1,11 +1,6 @@
 // @flow
-<<<<<<< HEAD
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-=======
-import React from "react";
-import styled, { keyframes } from "styled-components";
->>>>>>> v3-11
 
 const spin = keyframes`
   from {
@@ -23,12 +18,6 @@ const Image = styled.img`
   max-width: 250px;
 `;
 
-<<<<<<< HEAD
 const Spinner = () => <Image src="/public/img/loading.png" alt="loading indicator" />;
-=======
-const Spinner = () => (
-  <Image src="/public/img/loading.png" alt="loading indicator" />
-);
->>>>>>> v3-11
 
 export default Spinner;
